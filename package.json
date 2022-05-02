@@ -1,0 +1,45 @@
+{
+  "name": "@nkduy/babel-eslint",
+  "version": "7.2.3",
+  "description": "Custom parser for ESLint",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "babylon-to-espree"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhduy1407/babel-eslint.git"
+  },
+  "dependencies": {
+    "babel-code-frame": "^6.22.0",
+    "@nkduy/babel-traverse": "^6.24.1",
+    "@nkduy/babel-types": "^6.24.4",
+    "@nkduy/babylon": "^6.11.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run test-only",
+    "test-only": "mocha",
+    "lint": "eslint index.js babylon-to-espree test",
+    "fix": "eslint index.js babylon-to-espree test --fix",
+    "changelog": "git log `git describe --tags --abbrev=0`..HEAD --pretty=format:' * %s (%an)' | grep -v 'Merge pull request'"
+  },
+  "author": "NKDuy <kn145660@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/babel-eslint/issues"
+  },
+  "homepage": "https://github.com/khanhduy1407/babel-eslint",
+  "devDependencies": {
+    "@nkduy/babel-eslint": "^7.2.3",
+    "dedent": "^0.7.0",
+    "eslint": "^3.18.0",
+    "eslint-config-babel": "^6.0.0",
+    "eslint-plugin-flowtype": "^2.30.3",
+    "espree": "^3.4.0",
+    "mocha": "^3.0.0"
+  }
+}
